@@ -84,7 +84,7 @@ export function Hero() {
           Nail art a medida • Madrid
         </p>
 
-        <h1 className="display text-[var(--text-step-5)]">
+        <h1 className="display text-step-5">
           <span className="block overflow-hidden pb-[0.04em]">
             <span data-hero-word className="block">
               Uñas

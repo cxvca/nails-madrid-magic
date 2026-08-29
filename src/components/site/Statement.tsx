@@ -7,7 +7,7 @@ export function Statement() {
         <div className="md:col-span-8">
           <SplitHeading
             text="No es una manicura. Es una pieza única."
-            className="display text-[var(--text-step-4)]"
+            className="display text-step-4"
           />
         </div>
         <Reveal className="md:col-span-4 md:pt-3">

@@ -79,7 +79,7 @@ export function Lightbox({
         </div>
 
         <div className="md:w-[26rem] md:shrink-0">
-          <h3 data-lb-fade className="display text-[var(--text-step-3)]">
+          <h3 data-lb-fade className="display text-step-3">
             {work.name}
           </h3>
           <p data-lb-fade className="mt-4 text-muted-foreground">
