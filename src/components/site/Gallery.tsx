@@ -81,7 +81,7 @@ function GalleryItem({ work, onOpen }: { work: Work; onOpen: () => void }) {
       type="button"
       onClick={onOpen}
       data-cursor-grow
-      className={`group relative block overflow-hidden text-left ${placement[work.id] ?? "col-span-6 aspect-[3/4]"}`}
+      className={`group relative block w-full overflow-hidden text-left ${crop[work.id] ?? "aspect-[3/4]"}`}
     >
       <img
         src={work.src}
