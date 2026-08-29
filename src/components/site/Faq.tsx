@@ -77,7 +77,7 @@ function Item({ q, a }: { q: string; a: string }) {
         aria-expanded={open}
         className="flex w-full items-baseline justify-between gap-6 py-6 text-left md:py-7"
       >
-        <span className="font-display text-[var(--text-step-2)] leading-tight">{q}</span>
+        <span className="font-display text-step-2 leading-tight">{q}</span>
         <span className="label shrink-0 text-muted-foreground">{open ? "—" : "+"}</span>
       </button>
       <div ref={bodyRef} className="h-0 overflow-hidden">
@@ -92,7 +92,7 @@ export function Faq() {
     <section id="faq" className="border-t border-border py-24 md:py-32">
       <div className="mx-auto grid max-w-[1600px] gap-12 px-5 md:grid-cols-12 md:px-10">
         <div className="md:col-span-4">
-          <SplitHeading text="Preguntas" className="display text-[var(--text-step-4)]" />
+          <SplitHeading text="Preguntas" className="display text-step-4" />
         </div>
         <ul className="md:col-span-8">
           {faqs.map((f) => (

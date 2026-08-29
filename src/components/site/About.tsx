@@ -18,7 +18,7 @@ export function About() {
           <p data-reveal className="label mb-8 text-muted-foreground">
             Sobre mí • Madrid
           </p>
-          <SplitHeading text="Liis" className="display text-[var(--text-step-4)]" />
+          <SplitHeading text="Liis" className="display text-step-4" />
           <div className="mt-8 space-y-5 text-muted-foreground">
             <p data-reveal>
               Trabajo en Madrid y llevo años haciendo una cosa muy concreta: uñas que no se parecen a

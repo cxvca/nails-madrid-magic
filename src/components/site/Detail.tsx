@@ -92,7 +92,7 @@ export function Detail() {
         </div>
 
         <div className="md:pt-24">
-          <h2 className="display text-[var(--text-step-4)]">
+          <h2 className="display text-step-4">
             <span className="block">El</span>
             <span className="block md:pl-[18%]">detalle</span>
             <span className="block italic md:pl-[6%]">importa.</span>
@@ -109,7 +109,7 @@ export function Detail() {
                   {String(i + 1).padStart(2, "0")}
                 </span>
                 <div>
-                  <h3 className="display text-[var(--text-step-2)]">{c.title}</h3>
+                  <h3 className="display text-step-2">{c.title}</h3>
                   <p className="mt-2 max-w-sm text-muted-foreground">{c.body}</p>
                 </div>
               </li>

@@ -76,7 +76,7 @@ export function CustomSet() {
         <div ref={track} className="md:flex md:items-center md:gap-[6vw] md:pl-[max(1.25rem,5vw)]">
           <div className="md:w-[42vw] md:shrink-0">
             <div className="mx-auto max-w-[1600px] px-5 md:px-0">
-              <h2 className="display text-[var(--text-step-4)]">
+              <h2 className="display text-step-4">
                 <span className="block">Tu idea.</span>
                 <span className="block italic md:pl-[16%]">Su lienzo.</span>
               </h2>
@@ -109,7 +109,7 @@ export function CustomSet() {
                 <div className="mt-5 flex items-baseline gap-4">
                   <span className="label text-muted-foreground">{s.step}</span>
                   <div>
-                    <h3 className="display text-[var(--text-step-2)]">{s.title}</h3>
+                    <h3 className="display text-step-2">{s.title}</h3>
                     <p className="mt-2 max-w-xs text-muted-foreground">{s.body}</p>
                   </div>
                 </div>

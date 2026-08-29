@@ -17,7 +17,7 @@ export function Social() {
         <div className="flex flex-wrap items-end justify-between gap-6">
           <SplitHeading
             text="Más nail art, cada día."
-            className="display max-w-[18ch] text-[var(--text-step-4)]"
+            className="display max-w-[18ch] text-step-4"
           />
           <a
             href="https://www.instagram.com/nails.liis/"

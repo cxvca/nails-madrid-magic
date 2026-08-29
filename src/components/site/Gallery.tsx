@@ -72,7 +72,7 @@ function GalleryItem({ work, onOpen }: { work: Work; onOpen: () => void }) {
       />
       <span className="pointer-events-none absolute inset-x-0 bottom-0 flex items-end justify-between gap-4 bg-gradient-to-t from-background/85 to-transparent p-4 opacity-0 transition-opacity duration-500 group-hover:opacity-100 md:p-6">
         <span>
-          <span className="display block text-[var(--text-step-2)]">{work.name}</span>
+          <span className="display block text-step-2">{work.name}</span>
           <span className="label mt-1 block text-muted-foreground">{work.category}</span>
         </span>
         <span className="label shrink-0">Ver set →</span>
@@ -89,7 +89,7 @@ export function Gallery() {
     <section id="trabajos" className="grain border-t border-border py-24 md:py-32">
       <div className="mx-auto max-w-[1600px] px-5 md:px-10">
         <div className="flex flex-wrap items-end justify-between gap-6">
-          <SplitHeading text="Trabajos" className="display text-[var(--text-step-4)]" />
+          <SplitHeading text="Trabajos" className="display text-step-4" />
           <p className="label max-w-[16rem] text-muted-foreground">
             Sets reales · escultural, pintado a mano, chrome, extensiones
           </p>

@@ -82,7 +82,7 @@ export function Services() {
     <section id="servicios" className="border-t border-border bg-paper py-24 text-paper-foreground md:py-32">
       <div className="mx-auto max-w-[1600px] px-5 md:px-10">
         <div className="flex flex-wrap items-end justify-between gap-6">
-          <SplitHeading text="Servicios" className="display text-[var(--text-step-4)]" />
+          <SplitHeading text="Servicios" className="display text-step-4" />
           <p className="label max-w-[20rem] text-paper-muted">
             Duración de hasta 2 meses con el set intacto
           </p>
@@ -100,7 +100,7 @@ export function Services() {
                   className="grid w-full grid-cols-[3rem_1fr_auto] items-baseline gap-4 py-6 text-left md:py-8"
                 >
                   <span className="label text-paper-muted">{String(i + 1).padStart(2, "0")}</span>
-                  <span className="display text-[var(--text-step-3)] md:text-[var(--text-step-4)]">
+                  <span className="display text-step-3 md:text-step-4">
                     {s.name}
                   </span>
                   <span className="label text-paper-muted">{isOpen ? "—" : "+"}</span>

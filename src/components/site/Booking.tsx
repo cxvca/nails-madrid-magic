@@ -99,7 +99,7 @@ export function Booking() {
         <SplitHeading
           text="¿Lista para tu próximo set?"
           as="h2"
-          className="display max-w-[16ch] text-[var(--text-step-5)]"
+          className="display max-w-[16ch] text-step-5"
         />
 
         <div className="mt-12 flex flex-col gap-10 md:flex-row md:items-end md:justify-between">
