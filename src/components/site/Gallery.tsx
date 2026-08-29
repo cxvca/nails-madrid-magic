@@ -6,19 +6,38 @@ import { prefersReducedMotion, registerGsap } from "@/lib/motion";
 import { Lightbox } from "./Lightbox";
 import { SplitHeading } from "./Reveal";
 
-/** Editorial asymmetry: each piece gets its own placement, never a uniform grid. */
-const placement: Record<string, string> = {
-  "humo-negro": "col-span-12 md:col-span-6 md:col-start-1 aspect-[3/4] md:aspect-[4/5]",
-  "flor-de-yeso": "col-span-6 md:col-span-3 md:col-start-8 md:mt-[14vh] aspect-[3/4]",
-  "jardin-templado": "col-span-6 md:col-span-4 md:col-start-11 md:-mt-[6vh] aspect-[3/4]",
-  "mariposa-turquesa": "col-span-12 md:col-span-5 md:col-start-2 md:mt-[6vh] aspect-[3/4]",
-  espejo: "col-span-6 md:col-span-3 md:col-start-8 md:-mt-[10vh] aspect-[3/4]",
-  retablo: "col-span-12 md:col-span-8 md:col-start-4 md:mt-[8vh] aspect-[4/5] md:aspect-[16/11]",
-  perla: "col-span-12 md:col-span-6 md:col-start-1 aspect-[4/3]",
-  obsidiana: "col-span-6 md:col-span-4 md:col-start-8 md:mt-[12vh] aspect-[3/4]",
-  aurora: "col-span-6 md:col-span-3 md:col-start-2 md:-mt-[4vh] aspect-[3/4]",
-  "leche-y-oro": "col-span-12 md:col-span-6 md:col-start-6 md:mt-[4vh] aspect-[4/3]",
+/**
+ * Editorial asymmetry: three columns of unequal width, each offset vertically,
+ * with a different crop per piece. Never a uniform grid.
+ */
+const columns: { className: string; ids: string[] }[] = [
+  {
+    className: "md:w-[42%] md:pt-0",
+    ids: ["humo-negro", "retablo", "perla", "aurora"],
+  },
+  {
+    className: "md:w-[26%] md:pt-[18vh]",
+    ids: ["flor-de-yeso", "espejo", "obsidiana"],
+  },
+  {
+    className: "md:w-[32%] md:pt-[6vh]",
+    ids: ["jardin-templado", "mariposa-turquesa", "leche-y-oro"],
+  },
+];
+
+const crop: Record<string, string> = {
+  "humo-negro": "aspect-[4/5]",
+  retablo: "aspect-[16/11]",
+  perla: "aspect-[5/4]",
+  aurora: "aspect-[3/4]",
+  "flor-de-yeso": "aspect-[3/4]",
+  espejo: "aspect-[2/3]",
+  obsidiana: "aspect-[3/4]",
+  "jardin-templado": "aspect-[4/5]",
+  "mariposa-turquesa": "aspect-[3/4]",
+  "leche-y-oro": "aspect-[5/4]",
 };
+
 
 function GalleryItem({ work, onOpen }: { work: Work; onOpen: () => void }) {
   const ref = useRef<HTMLButtonElement>(null);
