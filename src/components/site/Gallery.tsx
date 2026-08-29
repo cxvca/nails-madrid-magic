@@ -114,9 +114,17 @@ export function Gallery() {
           </p>
         </div>
 
-        <div className="mt-16 grid grid-cols-12 gap-3 md:mt-24 md:gap-x-5 md:gap-y-[10vh]">
-          {works.map((w, i) => (
-            <GalleryItem key={w.id} work={w} onOpen={() => setIndex(i)} />
+        <div className="mt-16 flex flex-col gap-4 md:mt-24 md:flex-row md:items-start md:gap-5">
+          {columns.map((col, ci) => (
+            <div key={ci} className={`flex flex-col gap-4 md:gap-[8vh] ${col.className}`}>
+              {col.ids.map((id) => {
+                const i = works.findIndex((w) => w.id === id);
+                if (i === -1) return null;
+                return (
+                  <GalleryItem key={id} work={works[i]!} onOpen={() => setIndex(i)} />
+                );
+              })}
+            </div>
           ))}
         </div>
       </div>
