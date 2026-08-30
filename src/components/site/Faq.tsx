@@ -90,11 +90,11 @@ function Item({ q, a }: { q: string; a: string }) {
 export function Faq() {
   return (
     <section id="faq" className="border-t border-border py-24 md:py-32">
-      <div className="mx-auto grid max-w-[1600px] gap-12 px-5 md:grid-cols-12 md:px-10">
-        <div className="md:col-span-4">
-          <SplitHeading text="Preguntas" className="display text-step-4" />
+      <div className="mx-auto grid max-w-[1600px] gap-10 px-5 md:grid-cols-12 md:gap-12 md:px-10">
+        <div className="md:col-span-12">
+          <SplitHeading text="Preguntas" className="display text-step-3 md:text-step-4" />
         </div>
-        <ul className="md:col-span-8">
+        <ul className="md:col-span-12 lg:col-span-10 lg:col-start-3">
           {faqs.map((f) => (
             <Item key={f.q} q={f.q} a={f.a} />
           ))}
