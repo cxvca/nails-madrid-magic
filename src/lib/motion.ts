@@ -35,6 +35,10 @@ export function splitWords(el: HTMLElement): HTMLElement[] {
     mask.style.overflow = "hidden";
     mask.style.verticalAlign = "top";
     mask.style.paddingBottom = "0.06em";
+    // Spanish caps carry accents above the cap height; grow the mask upward so
+    // Á / Í / Ó are never clipped, then pull it back so layout is unchanged.
+    mask.style.paddingTop = "0.18em";
+    mask.style.marginTop = "-0.18em";
     const inner = document.createElement("span");
     inner.setAttribute("data-word-inner", "");
     inner.style.display = "inline-block";
